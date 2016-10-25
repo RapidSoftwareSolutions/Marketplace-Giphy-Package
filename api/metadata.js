@@ -21,7 +21,7 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy."
                 },
                 { 
-                    name: "q", 
+                    name: "query", 
                     type: "String", 
                     info: "search query term or phrase." 
                 },
@@ -201,7 +201,7 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy."
                 },
                 { 
-                    name: "q", 
+                    name: "query", 
                     type: "String", 
                     info: "search query term or phrase." 
                 },
@@ -325,6 +325,51 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
                 },
+            ],
+            callbacks: [
+                { name: "success", info:"Success" },
+                { name: "error", info:"Error" }
+            ]
+        },
+        {
+            name: "uploadGif",
+            description: "The Giphy Upload API allows you to upload and host your content programmatically to Giphy.com. We accept animated gifs or video files up to 100MB. Hosted Giphy URLs are supported and play on every major social network.",
+            args: [
+                {
+                    name: "apiKey",
+                    type: "credentials",
+                    info: "The access_token obtained from Giphy."
+                },
+                { 
+                    name: "username", 
+                    type: "String", 
+                    info: "Your assigned username (string, required for approved apps only)" 
+                },
+                { 
+                    name: "file", 
+                    type: "String", 
+                    info: "The animated GIF or video file (local file resource, required if no source_image_url supplied)." 
+                },
+                { 
+                    name: "sourceImageUrl", 
+                    type: "String", 
+                    info: "The URL for the image or video you wish to upload (string, required if no file parameter specified)" 
+                },
+                {
+                    name: "tags", 
+                    type: "String", 
+                    info: "Comma delimited list of tags (string, optional)"
+                },
+                {
+                    name: "sourcePostUrl", 
+                    type: "String", 
+                    info: "The source of the asset (string, optional)"
+                },
+                {
+                    name: "isHidden", 
+                    type: "String", 
+                    info: "True (boolean, optional)"
+                }
             ],
             callbacks: [
                 { name: "success", info:"Success" },

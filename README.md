@@ -41,7 +41,7 @@ Search all Giphy GIFs for a word or phrase. Punctuation will be stripped and ign
 | Field | Type       | Description
 |-------|------------|----------
 | apiKey| credentials| The access_token obtained from Giphy.
-| q     | String     | search query term or phrase.
+| query | String     | search query term or phrase.
 | limit | String     | (optional) number of results to return, maximum 100. Default 25.
 | offset| String     | (optional) results offset, defaults to 0.
 | rating| String     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
@@ -107,7 +107,7 @@ Replicates the functionality and requirements of the classic Giphy search, but r
 | Field | Type       | Description
 |-------|------------|----------
 | apiKey| credentials| The access_token obtained from Giphy.
-| q     | String     | search query term or phrase.
+| query | String     | search query term or phrase.
 | limit | String     | (optional) number of results to return, maximum 100. Default 25.
 | offset| String     | (optional) results offset, defaults to 0.
 | rating| String     | (optional) limit results to those rated (y,g, pg, pg-13 or r).

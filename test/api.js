@@ -3,12 +3,12 @@ const request = require('supertest-as-promised');
 const app = require('../index');
 
 const apiKey = 'dc6zaTOxFJmzC',
-    q = 'test',
-    limit = 1,
-    lang = 'en',
-    s = 'test',
-    gifId = 'RmHTAshaMOt8I',
-    gifIds = 'RmHTAshaMOt8I,l2SpRv6eIqbgm7hZe';
+    q        = 'test',
+    limit    = 1,
+    lang     = 'en',
+    s        = 'test',
+    gifId    = 'RmHTAshaMOt8I',
+    gifIds   = 'RmHTAshaMOt8I,l2SpRv6eIqbgm7hZe';
 
 describe(`${PACKAGE_NAME} package`, () => {   
     it('/searchGifs', () => {
@@ -24,7 +24,7 @@ describe(`${PACKAGE_NAME} package`, () => {
     it('/getTrendingGifs', () => {
         return request(app)
         .post(`/api/${PACKAGE_NAME}/getTrendingGifs`)
-        .send({args:{apiKey, q, limit}})
+        .send({args:{apiKey, limit}})
         .expect(200)
         .then((res) => {
             assert.equal(res.body.callback, 'success');

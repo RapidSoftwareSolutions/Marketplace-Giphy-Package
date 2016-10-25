@@ -6,7 +6,7 @@ module.exports = (req, res, callback) => {
 
     let {
         apiKey, 
-        q,
+        query,
         limit,
         offset,
         rating,
@@ -19,7 +19,7 @@ module.exports = (req, res, callback) => {
         contextWrites: {}
     };
 
-    if(!apiKey || !q) {
+    if(!apiKey || !query) {
         callback('Fill in required fields.', res, {to});
         return;
     }
@@ -28,7 +28,7 @@ module.exports = (req, res, callback) => {
         method: 'GET',
         url: 'http://api.giphy.com/v1/gifs/search',
         qs: lib.clearArgs({
-            q,
+            query,
             limit,
             offset,
             rating,
