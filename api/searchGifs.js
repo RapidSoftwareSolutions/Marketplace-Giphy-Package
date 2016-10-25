@@ -11,7 +11,6 @@ module.exports = (req, res, callback) => {
         offset,
         rating,
         lang,
-        fmt,
         to="to" } = req.body.args;
 
     let r  = {
@@ -28,12 +27,11 @@ module.exports = (req, res, callback) => {
         method: 'GET',
         url: 'http://api.giphy.com/v1/gifs/search',
         qs: lib.clearArgs({
-            query,
+            q: query,
             limit,
             offset,
             rating,
             lang,
-            fmt,
             api_key: apiKey  
         })
     },

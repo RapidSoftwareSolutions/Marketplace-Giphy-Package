@@ -6,10 +6,9 @@ module.exports = (req, res, callback) => {
 
     let {
         apiKey, 
-        s,
+        text,
         rating,
         lang,
-        fmt,
         to="to" } = req.body.args;
 
     let r  = {
@@ -17,7 +16,7 @@ module.exports = (req, res, callback) => {
         contextWrites: {}
     };
 
-    if(!apiKey || !s) {
+    if(!apiKey || !text) {
         callback('Fill in required fields.', res, {to});
         return;
     }
@@ -26,10 +25,9 @@ module.exports = (req, res, callback) => {
         method: 'GET',
         url: 'http://api.giphy.com/v1/gifs/translate',
         qs: lib.clearArgs({
-            s,
+            s: text,
             rating,
             lang,
-            fmt,
             api_key: apiKey  
         })
     },

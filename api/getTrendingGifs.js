@@ -8,7 +8,6 @@ module.exports = (req, res, callback) => {
         apiKey, 
         limit,
         rating,
-        fmt,
         to="to" } = req.body.args;
 
     let r  = {
@@ -27,7 +26,6 @@ module.exports = (req, res, callback) => {
         qs: lib.clearArgs({
             limit,
             rating,
-            fmt,
             api_key: apiKey  
         })
     },

@@ -45,11 +45,7 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "(optional) specify default country for regional content; format is 2-letter ISO 639-1 country code." 
                 },
-                { 
-                    name: "fmt", 
-                    type: "String", 
-                    info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
-                },
+                
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -75,11 +71,7 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "limit results to those rated (y,g, pg, pg-13 or r)." 
                 },
-                { 
-                    name: "fmt", 
-                    type: "String", 
-                    info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
-                },
+                
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -96,7 +88,7 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy."
                 },
                 { 
-                    name: "s", 
+                    name: "text", 
                     type: "String", 
                     info: "term or phrase to translate into a GIF" 
                 },
@@ -110,11 +102,7 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "(optional) specify default country for regional content; format is 2-letter ISO 639-1 country code. " 
                 },
-                { 
-                    name: "fmt", 
-                    type: "String", 
-                    info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
-                },
+                
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -140,11 +128,7 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "limit results to those rated (y,g, pg, pg-13 or r)." 
                 },
-                { 
-                    name: "fmt", 
-                    type: "String", 
-                    info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
-                },
+                
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -225,11 +209,7 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "(optional) specify default country for regional content; format is 2-letter ISO 639-1 country code." 
                 },
-                { 
-                    name: "fmt", 
-                    type: "String", 
-                    info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
-                },
+                
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -255,11 +235,7 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "limit results to those rated (y,g, pg, pg-13 or r)." 
                 },
-                { 
-                    name: "fmt", 
-                    type: "String", 
-                    info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
-                },
+                
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -276,7 +252,7 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy."
                 },
                 { 
-                    name: "s", 
+                    name: "text", 
                     type: "String", 
                     info: "term or phrase to translate into a GIF" 
                 },
@@ -290,11 +266,7 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "(optional) specify default country for regional content; format is 2-letter ISO 639-1 country code. " 
                 },
-                { 
-                    name: "fmt", 
-                    type: "String", 
-                    info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
-                },
+                
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -320,11 +292,7 @@ module.exports.do = function(req, res){
                     type: "String", 
                     info: "limit results to those rated (y,g, pg, pg-13 or r)." 
                 },
-                { 
-                    name: "fmt", 
-                    type: "String", 
-                    info: "(optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)" 
-                },
+                
             ],
             callbacks: [
                 { name: "success", info:"Success" },

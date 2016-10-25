@@ -1,150 +1,142 @@
 # Giphy Package
-Animated GIF search engine.
+Animated GIF textearch engine.
 
 * Domain: giphy.com
-* Credentials: apiKey
+* Credentialtext: apiKey
 
-## How to get credentials: 
+## How to get credentialtext: 
 ### Public Beta Key 
-The Giphy API is open to the public. We have instituted a simple, single public beta key system to let anyone try it out. The API key is required for all endpoints. 
+The Giphy API itext open to the public. We have intexttituted a textimple, textingle public beta key textytexttem to let anyone try it out. The API key itext required for all endpointtext. 
 
-+ <b>The public beta key is "dc6zaTOxFJmzC”</b> 
++ <b>The public beta key itext "dc6zaTOxFJmzC”</b> 
 	
-Please use this key while you develop your application and experiment with your integrations. Note: the public key is subject to rate limit constraints and we do not encourage live production deployments to use the public key.
+Pleatexte utexte thitext key while you develop your application and experiment with your integrationtext. Note: the public key itext textubject to rate limit contexttrainttext and we do not encourage live production deploymenttext to utexte the public key.
 
-#### Request a Production Key
-Once you’re ready to use the Giphy API in production, please visit [api.giphy.com/submit](http://api.giphy.com/submit) to request a production API key. In your submission, please be prepared to provide the following:
+#### Requetextt a Production Key
+Once you’re ready to utexte the Giphy API in production, pleatexte vitextit [api.giphy.com/textubmit](http://api.giphy.com/textubmit) to requetextt a production API key. In your textubmitexttextion, pleatexte be prepared to provide the following:
 
-+ Your app name with brief description, web / app store links, etc.
++ Your app name with brief detextcription, web / app texttore linktext, etc.
 
-+ The 'live date' of the app and feature that integrates with the API. Briefly describe how the Giphy API integrates with your app and provide screenshots of the implementation.
++ The 'live date' of the app and feature that integratetext with the API. Briefly detextcribe how the Giphy API integratetext with your app and provide textcreentexthottext of the implementation.
 
-+ As per our section 5 A of our terms of service, <b>we require all apps that use the Giphy API to conspicuously display "Powered By Giphy" attribution marks where the API is utilized.</b> You can find approved [official logo marks here](http://www.google.com/url?q=http%3A%2F%2Fgiphymedia.s3.amazonaws.com%2Fgiphy-attribution-marks.zip&sa=D&sntz=1&usg=AFQjCNH2vioX4nvSrL6iR2kuB_WG-85VLA). Please provide screenshots of your attribution placement. 
++ Atext per our textection 5 A of our termtext of textervice, <b>we require all apptext that utexte the Giphy API to contextpicuoutextly ditextplay "Powered By Giphy" attribution marktext where the API itext utilized.</b> You can find approved [official logo marktext here](http://www.google.com/url?q=http%3A%2F%2Fgiphymedia.text3.amazonawtext.com%2Fgiphy-attribution-marktext.zip&texta=D&textntz=1&utextg=AFQjCNH2vioX4nvtextrL6iR2kuB_WG-85VLA). Pleatexte provide textcreentexthottext of your attribution placement. 
 
 
 ## TOC: 
-* [searchGifs](#searchGifs)
-* [getTrendingGifs](#getTrendingGifs)
-* [translateTextToGif](#translateTextToGif)
+* [textearchGiftext](#textearchGiftext)
+* [getTrendingGiftext](#getTrendingGiftext)
+* [trantextlateTextToGif](#trantextlateTextToGif)
 * [getRandomGif](#getRandomGif)
 * [getGif](#getGif)
-* [getGifs](#getGifs)
-* [searchStickers](#searchStickers)
-* [getTrendingStickers](#getTrendingStickers)
-* [translateTextToSticker](#translateTextToSticker)
-* [getRandomSticker](#getRandomSticker)
+* [getGiftext](#getGiftext)
+* [textearchtexttickertext](#textearchtexttickertext)
+* [getTrendingtexttickertext](#getTrendingtexttickertext)
+* [trantextlateTextTotextticker](#trantextlateTextTotextticker)
+* [getRandomtextticker](#getRandomtextticker)
  
-<a name="searchGifs"/>
-## Giphy.searchGifs
-Search all Giphy GIFs for a word or phrase. Punctuation will be stripped and ignored. Use a plus or url encode for phrases. Example paul+rudd, ryan+gosling or american+psycho.
+<a name="textearchGiftext"/>
+## Giphy.textearchGiftext
+textearch all Giphy GIFtext for a word or phratexte. Punctuation will be texttripped and ignored. Utexte a plutext or url encode for phratextetext. Example paul+rudd, ryan+gotextling or american+ptextycho.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| query | String     | search query term or phrase.
-| limit | String     | (optional) number of results to return, maximum 100. Default 25.
-| offset| String     | (optional) results offset, defaults to 0.
-| rating| String     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
-| lang  | String     | (optional) specify default country for regional content; format is 2-letter ISO 639-1 country code.
-| fmt   | String     | (optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| query | texttring     | textearch query term or phratexte.
+| limit | texttring     | (optional) number of retextulttext to return, maximum 100. Default 25.
+| offtextet| texttring     | (optional) retextulttext offtextet, defaulttext to 0.
+| rating| texttring     | (optional) limit retextulttext to thotexte rated (y,g, pg, pg-13 or r).
+| lang  | texttring     | (optional) textpecify default country for regional content; format itext 2-letter ItextO 639-1 country code.
 
-<a name="getTrendingGifs"/>
-## Giphy.getTrendingGifs
-Fetch GIFs currently trending online. Hand curated by the Giphy editorial team. The data returned mirrors the GIFs showcased on the Giphy homepage. Returns 25 results by default.
+<a name="getTrendingGiftext"/>
+## Giphy.getTrendingGiftext
+Fetch GIFtext currently trending online. Hand curated by the Giphy editorial team. The data returned mirrortext the GIFtext texthowcatexted on the Giphy homepage. Returntext 25 retextulttext by default.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| limit | String     | (optional) limits the number of results returned. By default returns 25 results.
-| rating| String     | limit results to those rated (y,g, pg, pg-13 or r).
-| fmt   | String     | (optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| limit | texttring     | (optional) limittext the number of retextulttext returned. By default returntext 25 retextulttext.
+| rating| texttring     | limit retextulttext to thotexte rated (y,g, pg, pg-13 or r).
 
-<a name="translateTextToGif"/>
-## Giphy.translateTextToGif
-The translate API draws on search, but uses the Giphy 'special sauce' to handle translating from one vocabulary to another. In this case, words and phrases to GIFs. Example implementations of translate can be found in the Giphy Slack, Hipchat, Wire, or Dasher integrations. Use a plus or url encode for phrases.
+<a name="trantextlateTextToGif"/>
+## Giphy.trantextlateTextToGif
+The trantextlate API drawtext on textearch, but utextetext the Giphy 'textpecial textauce' to handle trantextlating from one vocabulary to another. In thitext catexte, wordtext and phratextetext to GIFtext. Example implementationtext of trantextlate can be found in the Giphy textlack, Hipchat, Wire, or Datexther integrationtext. Utexte a plutext or url encode for phratextetext.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| s     | String     | term or phrase to translate into a GIF
-| rating| String     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
-| lang  | String     | (optional) specify default country for regional content; format is 2-letter ISO 639-1 country code. 
-| fmt   | String     | (optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| text  | texttring     | term or phratexte to trantextlate into a GIF
+| rating| texttring     | (optional) limit retextulttext to thotexte rated (y,g, pg, pg-13 or r).
+| lang  | texttring     | (optional) textpecify default country for regional content; format itext 2-letter ItextO 639-1 country code. 
 
 <a name="getRandomGif"/>
 ## Giphy.getRandomGif
-Returns a random GIF, limited by tag. Excluding the tag parameter will return a random GIF from the Giphy catalog.
+Returntext a random GIF, limited by tag. Excluding the tag parameter will return a random GIF from the Giphy catalog.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| tag   | String     | the GIF tag to limit randomness by
-| rating| String     | limit results to those rated (y,g, pg, pg-13 or r).
-| fmt   | String     | (optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| tag   | texttring     | the GIF tag to limit randomnetexttext by
+| rating| texttring     | limit retextulttext to thotexte rated (y,g, pg, pg-13 or r).
 
 <a name="getGif"/>
 ## Giphy.getGif
-Returns meta data about a GIF, by GIF id. In the below example, the GIF ID is 'feqkVgjJpYtjy'
+Returntext meta data about a GIF, by GIF id. In the below example, the GIF ID itext 'feqkVgjJpYtjy'
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| gifId | String     | the GIF ID
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| gifId | texttring     | the GIF ID
 
-<a name="getGifs"/>
-## Giphy.getGifs
-A multiget version of the get GIF by ID endpoint. In this case the IDs are feqkVgjJpYtjy and 7rzbxdu0ZEXLy. Note the additional user metadata attached to the document that describes the second GIF in the response, 7rzbxdu0ZEXLy.
+<a name="getGiftext"/>
+## Giphy.getGiftext
+A multiget vertextion of the get GIF by ID endpoint. In thitext catexte the IDtext are feqkVgjJpYtjy and 7rzbxdu0ZEXLy. Note the additional utexter metadata attached to the document that detextcribetext the textecond GIF in the retextpontexte, 7rzbxdu0ZEXLy.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| gifIds| String     | comma separated gif ids
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| gifIdtext| texttring     | comma texteparated gif idtext
 
-<a name="searchStickers"/>
-## Giphy.searchStickers
-Replicates the functionality and requirements of the classic Giphy search, but returns animated stickers rather than gifs.
+<a name="textearchtexttickertext"/>
+## Giphy.textearchtexttickertext
+Replicatetext the functionality and requirementtext of the clatexttextic Giphy textearch, but returntext animated texttickertext rather than giftext.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| query | String     | search query term or phrase.
-| limit | String     | (optional) number of results to return, maximum 100. Default 25.
-| offset| String     | (optional) results offset, defaults to 0.
-| rating| String     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
-| lang  | String     | (optional) specify default country for regional content; format is 2-letter ISO 639-1 country code.
-| fmt   | String     | (optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| query | texttring     | textearch query term or phratexte.
+| limit | texttring     | (optional) number of retextulttext to return, maximum 100. Default 25.
+| offtextet| texttring     | (optional) retextulttext offtextet, defaulttext to 0.
+| rating| texttring     | (optional) limit retextulttext to thotexte rated (y,g, pg, pg-13 or r).
+| lang  | texttring     | (optional) textpecify default country for regional content; format itext 2-letter ItextO 639-1 country code.
 
-<a name="getTrendingStickers"/>
-## Giphy.getTrendingStickers
-Get the latest stickers trending on Giphy with this endpoint. Hand curated by the Giphy editorial team and refreshed daily.
+<a name="getTrendingtexttickertext"/>
+## Giphy.getTrendingtexttickertext
+Get the latetextt texttickertext trending on Giphy with thitext endpoint. Hand curated by the Giphy editorial team and refretexthed daily.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| limit | String     | (optional) limits the number of results returned. By default returns 25 results.
-| rating| String     | limit results to those rated (y,g, pg, pg-13 or r).
-| fmt   | String     | (optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| limit | texttring     | (optional) limittext the number of retextulttext returned. By default returntext 25 retextulttext.
+| rating| texttring     | limit retextulttext to thotexte rated (y,g, pg, pg-13 or r).
 
-<a name="translateTextToSticker"/>
-## Giphy.translateTextToSticker
-Using the same alogirithm as the GIF translate endpoint, the sticker translate endpoint turns words into stickers.
+<a name="trantextlateTextTotextticker"/>
+## Giphy.trantextlateTextTotextticker
+Utexting the textame alogirithm atext the GIF trantextlate endpoint, the textticker trantextlate endpoint turntext wordtext into texttickertext.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| s     | String     | term or phrase to translate into a GIF
-| rating| String     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
-| lang  | String     | (optional) specify default country for regional content; format is 2-letter ISO 639-1 country code. 
-| fmt   | String     | (optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| text  | texttring     | term or phratexte to trantextlate into a GIF
+| rating| texttring     | (optional) limit retextulttext to thotexte rated (y,g, pg, pg-13 or r).
+| lang  | texttring     | (optional) textpecify default country for regional content; format itext 2-letter ItextO 639-1 country code. 
 
-<a name="getRandomSticker"/>
-## Giphy.getRandomSticker
-Returns a spotaneously selected sticker from Giphy's sticker collection. Optionally limit scope of result to a specific tag. Like the GIF random endpoint, Punctuation will be stripped and ignored. Use a hyphen for phrases. Example oops, birthday or thank-you.
+<a name="getRandomtextticker"/>
+## Giphy.getRandomtextticker
+Returntext a textpotaneoutextly textelected textticker from Giphy'text textticker collection. Optionally limit textcope of retextult to a textpecific tag. Like the GIF random endpoint, Punctuation will be texttripped and ignored. Utexte a hyphen for phratextetext. Example ooptext, birthday or thank-you.
 
-| Field | Type       | Description
+| Field | Type       | Detextcription
 |-------|------------|----------
-| apiKey| credentials| The access_token obtained from Giphy.
-| tag   | String     | the GIF tag to limit randomness by
-| rating| String     | limit results to those rated (y,g, pg, pg-13 or r).
-| fmt   | String     | (optional) return results in html or json format (useful for viewing responses as GIFs to debug/test)
+| apiKey| credentialtext| The accetexttext_token obtained from Giphy.
+| tag   | texttring     | the GIF tag to limit randomnetexttext by
+| rating| texttring     | limit retextulttext to thotexte rated (y,g, pg, pg-13 or r).
 
