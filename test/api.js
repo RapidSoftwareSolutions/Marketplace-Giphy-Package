@@ -3,10 +3,10 @@ const request = require('supertest-as-promised');
 const app = require('../index');
 
 const apiKey = 'dc6zaTOxFJmzC',
-    q        = 'test',
+    query   = 'test',
     limit    = 1,
     lang     = 'en',
-    s        = 'test',
+    text     = 'test',
     gifId    = 'RmHTAshaMOt8I',
     gifIds   = 'RmHTAshaMOt8I,l2SpRv6eIqbgm7hZe';
 
@@ -14,7 +14,7 @@ describe(`${PACKAGE_NAME} package`, () => {
     it('/searchGifs', () => {
         return request(app)
         .post(`/api/${PACKAGE_NAME}/searchGifs`)
-        .send({args:{apiKey, q, limit}})
+        .send({args:{apiKey, query, limit}})
         .expect(200)
         .then((res) => {
             assert.equal(res.body.callback, 'success');
@@ -34,14 +34,15 @@ describe(`${PACKAGE_NAME} package`, () => {
     it('/translateTextToGif', () => {
         return request(app)
         .post(`/api/${PACKAGE_NAME}/translateTextToGif`)
-        .send({args:{apiKey, s}})
+        .send({args:{apiKey, text}})
         .expect(200)
         .then((res) => {
             assert.equal(res.body.callback, 'success');
         });
     });
 
-    it('/getRandomGif', () => {
+    it('/getRandomGif', function() {
+        this.timeout(5000);
         return request(app)
         .post(`/api/${PACKAGE_NAME}/getRandomGif`)
         .send({args:{apiKey}})
@@ -74,7 +75,7 @@ describe(`${PACKAGE_NAME} package`, () => {
     it('/searchStickers', () => {
         return request(app)
         .post(`/api/${PACKAGE_NAME}/searchStickers`)
-        .send({args:{apiKey, q, limit}})
+        .send({args:{apiKey, query, limit}})
         .expect(200)
         .then((res) => {
             assert.equal(res.body.callback, 'success');
@@ -94,14 +95,15 @@ describe(`${PACKAGE_NAME} package`, () => {
     it('/translateTextToSticker', () => {
         return request(app)
         .post(`/api/${PACKAGE_NAME}/translateTextToSticker`)
-        .send({args:{apiKey, s}})
+        .send({args:{apiKey, text}})
         .expect(200)
         .then((res) => {
             assert.equal(res.body.callback, 'success');
         });
     });
 
-    it('/getRandomSticker', () => {
+    it('/getRandomSticker', function() {
+        this.timeout(5000);
         return request(app)
         .post(`/api/${PACKAGE_NAME}/getRandomSticker`)
         .send({args:{apiKey}})
