@@ -13,7 +13,7 @@ app.use(bodyParser.json(({limit: '50mb'})));
 app.use(bodyParser.urlencoded({limit: '50mb', extended:true}));
 app.all(`/api/${PACKAGE_NAME}`, require('./api/metadata.js').do);
 
-let callback = (err, res, r) => {
+let callback = (err, res, r, fields) => {
     let response = {
         callback     : "",
         contextWrites: {}
@@ -21,7 +21,7 @@ let callback = (err, res, r) => {
         
     if(err) {
         response.callback = 'error';
-        response.contextWrites[r.to] = JSON.parse(r.result || err);
+        response.contextWrites[r.to] = !fields ? JSON.parse(r.result || err) : {message: err, fields};
     } else {
         response.callback = 'success';
         response.contextWrites[r.to] = JSON.parse(r.result);

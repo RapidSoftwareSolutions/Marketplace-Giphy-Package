@@ -15,7 +15,7 @@ module.exports = (req, res, callback) => {
     };
 
     if(!apiKey || !gifId) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields.', res, {to}, ['apiKey', 'gifId']);
         return;
     }
 

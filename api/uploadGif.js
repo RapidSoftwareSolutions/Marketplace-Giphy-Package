@@ -23,7 +23,7 @@ module.exports = (req, res, callback) => {
     };
 
     if(!apiKey) {
-        callback('Fill in required fields.', res, {to});
+        callback('Fill in required fields.', res, {to}, ['apiKey']);
         return;
     }
 
