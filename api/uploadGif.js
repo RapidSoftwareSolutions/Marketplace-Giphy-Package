@@ -10,8 +10,7 @@ module.exports = (req, res, callback) => {
     let {
         apiKey, 
         username,
-        file,
-        sourceImageUrl,
+        sourceImage,
         tags,
         sourcePostUrl,
         isHidden,
@@ -31,7 +30,7 @@ module.exports = (req, res, callback) => {
         api_key:          apiKey,
         username:         username,
         source_post_url:  sourcePostUrl,
-        source_image_url: sourceImageUrl || file,
+        source_image_url: sourceImage,
         tags:             tags,
         is_hidden:        isHidden,
     }))
@@ -41,7 +40,7 @@ module.exports = (req, res, callback) => {
             api_key:          apiKey,
             username:         username,
             source_post_url:  sourcePostUrl,
-            source_image_url: sourceImageUrl || file,
+            source_image_url: sourceImage,
             tags:             tags,
             is_hidden:        isHidden,
         }

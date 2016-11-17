@@ -314,14 +314,9 @@ module.exports.do = function(req, res){
                     info: "Optional: Your assigned username (string, required for approved apps only)" 
                 },
                 { 
-                    name: "file", 
-                    type: "String", 
-                    info: "Required: The animated GIF or video file (local file resource, required if no source_image_url supplied)." 
-                },
-                { 
-                    name: "sourceImageUrl", 
-                    type: "String", 
-                    info: "Required: The URL for the image or video you wish to upload (string, required if no file parameter specified)" 
+                    name: "sourceImage",
+                    type: "File",
+                    info: "Required: The URL or the file of the media you wish to upload"
                 },
                 {
                     name: "tags", 
