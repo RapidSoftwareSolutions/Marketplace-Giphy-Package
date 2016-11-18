@@ -26,15 +26,6 @@ module.exports = (req, res, callback) => {
         return;
     }
 
-    console.log(JSON.stringify({
-        api_key:          apiKey,
-        username:         username,
-        source_post_url:  sourcePostUrl,
-        source_image_url: sourceImage,
-        tags:             tags,
-        is_hidden:        isHidden,
-    }))
-
     request.post('http://upload.giphy.com/v1/gifs', { 
         form: {
             api_key:          apiKey,
