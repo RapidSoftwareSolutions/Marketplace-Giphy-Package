@@ -4,7 +4,7 @@ module.exports.do = function(req, res){
     "package": "Giphy",
     "tagline": "Giphy API",
     "description": "Animated GIF search engine.",
-    "image": "http://cdn.appstorm.net/web.appstorm.net/web/files/2013/09/giphy-logo1.png",
+    "image": "http://logo.clearbit.com/giphy.com",
     "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-giphy-Package",
     "accounts": {
         "domain": "giphy.com",
