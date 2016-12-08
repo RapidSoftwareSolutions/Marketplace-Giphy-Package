@@ -19,23 +19,9 @@ Once you’re ready to use the Giphy API in production, please visit [api.giphy.
 
 + The 'live date' of the app and feature that integrates with the API. Briefly describe how the Giphy API integrates with your app and provide screenshots of the implementation.
 
-+ As per our section 5 A of our terms of service, <b>we require all apps that use the Giphy API to conspicuously display "Powered By Giphy" attribution marks where the API is utilized.</b> You can find approved [official logo marks here](http://www.google.com/url?q=http%3A%2F%2Fgiphymedia.s3.amazonaws.com%2Fgiphy-attribution-marks.zip&sa=D&sntz=1&usg=AFQjCNH2vioX4nvsrL6iR2kuB_WG-85VLA). Please provide screenshots of your attribution placement. 
++ As per our section 5 A of our terms of service, <b>we require all apps that use the Giphy API to conspicuously display "Powered By Giphy" attribution marks where the API is utilized.</b> You can find approved [official logo marks here](http://www.google.com/url?q=http%3A%2F%2Fgiphymedia.s3.amazonaws.com%2Fgiphy-attribution-marks.zip&sa=D&sntz=1&usg=AFQjCNH2vioX4nvsrL6iR2kuB_WG-85VLA). Please provide screenshots of your attribution placement.
 
 
-## TOC: 
-* [searchGifs](#searchGifs)
-* [getTrendingGifs](#getTrendingGifs)
-* [translatesToGif](#translatesToGif)
-* [getRandomGif](#getRandomGif)
-* [getGif](#getGif)
-* [getGifs](#getGifs)
-* [searchstickers](#searchstickers)
-* [getTrendingstickers](#getTrendingstickers)
-* [translatesTosticker](#translatesTosticker)
-* [getRandomsticker](#getRandomsticker)
-* [uploadGif](#uploadGif)
-
-<a name="searchGifs"/>
 ## Giphy.searchGifs
 search all Giphy GIFs for a word or phrase. Punctuation will be stripped and ignored. Use a plus or url encode for phrases. Example paul+rudd, ryan+gosling or american+psycho.
 
@@ -48,7 +34,7 @@ search all Giphy GIFs for a word or phrase. Punctuation will be stripped and ign
 | rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 | lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code.
 
-<a name="getTrendingGifs"/>
+
 ## Giphy.getTrendingGifs
 Fetch GIFs currently trending online. Hand curated by the Giphy editorial team. The data returned mirrors the GIFs showcased on the Giphy homepage. Returns 25 results by default.
 
@@ -58,7 +44,7 @@ Fetch GIFs currently trending online. Hand curated by the Giphy editorial team. 
 | limit | string     | (optional) limits the number of results returned. By default returns 25 results.
 | rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 
-<a name="translatesToGif"/>
+
 ## Giphy.translatesToGif
 The translate API draws on search, but uses the Giphy 'special sauce' to handle translating from one vocabulary to another. In this case, words and phrases to GIFs. Example implementations of translate can be found in the Giphy slack, Hipchat, Wire, or Dasher integrations. Use a plus or url encode for phrases.
 
@@ -69,7 +55,7 @@ The translate API draws on search, but uses the Giphy 'special sauce' to handle 
 | rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 | lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code. 
 
-<a name="getRandomGif"/>
+
 ## Giphy.getRandomGif
 Returns a random GIF, limited by tag. Excluding the tag parameter will return a random GIF from the Giphy catalog.
 
@@ -79,7 +65,7 @@ Returns a random GIF, limited by tag. Excluding the tag parameter will return a 
 | tag   | string     | Required: the GIF tag to limit randomness by
 | rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 
-<a name="getGif"/>
+
 ## Giphy.getGif
 Returns meta data about a GIF, by GIF id. In the below example, the GIF ID is 'feqkVgjJpYtjy'
 
@@ -88,7 +74,7 @@ Returns meta data about a GIF, by GIF id. In the below example, the GIF ID is 'f
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | gifId | string     | Required: the GIF ID
 
-<a name="getGifs"/>
+
 ## Giphy.getGifs
 A multiget version of the get GIF by ID endpoint. In this case the IDs are feqkVgjJpYtjy and 7rzbxdu0ZEXLy. Note the additional user metadata attached to the document that describes the second GIF in the response, 7rzbxdu0ZEXLy.
 
@@ -97,7 +83,7 @@ A multiget version of the get GIF by ID endpoint. In this case the IDs are feqkV
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | gifIds| string     | Required: comma separated gif ids
 
-<a name="searchstickers"/>
+
 ## Giphy.searchstickers
 Replicates the functionality and requirements of the classic Giphy search, but returns animated stickers rather than gifs.
 
@@ -110,7 +96,7 @@ Replicates the functionality and requirements of the classic Giphy search, but r
 | rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 | lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code.
 
-<a name="getTrendingstickers"/>
+
 ## Giphy.getTrendingstickers
 Get the latest stickers trending on Giphy with this endpoint. Hand curated by the Giphy editorial team and refreshed daily.
 
@@ -120,7 +106,7 @@ Get the latest stickers trending on Giphy with this endpoint. Hand curated by th
 | limit | string     | (optional) limits the number of results returned. By default returns 25 results.
 | rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 
-<a name="translatesTosticker"/>
+
 ## Giphy.translatesTosticker
 Using the same alogirithm as the GIF translate endpoint, the sticker translate endpoint turns words into stickers.
 
@@ -131,7 +117,7 @@ Using the same alogirithm as the GIF translate endpoint, the sticker translate e
 | rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 | lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code. 
 
-<a name="getRandomsticker"/>
+
 ## Giphy.getRandomsticker
 Returns a spotaneously selected sticker from Giphy's sticker collection. Optionally limit scope of result to a specific tag. Like the GIF random endpoint, Punctuation will be stripped and ignored. Use a hyphen for phrases. Example oops, birthday or thank-you.
 
@@ -141,7 +127,7 @@ Returns a spotaneously selected sticker from Giphy's sticker collection. Optiona
 | tag   | string     | Required: the GIF tag to limit randomness by
 | rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 
-<a name="uploadGif"/>
+
 ## Giphy.uploadGif
 The Giphy Upload API allows you to upload and host your content programmatically to Giphy.com. We accept animated gifs or video files up to 100MB. Hosted Giphy URLs are supported and play on every major social network.
 
@@ -149,7 +135,6 @@ The Giphy Upload API allows you to upload and host your content programmatically
 |-------|------------|----------
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | username   | string     | Optional: Your assigned username (string, required for approved apps only)
-| file| string     | Required: The animated GIF or video file (local file resource, required if no source_image_url supplied).
 | sourceImageUrl| string     | Required: The URL for the image or video you wish to upload (string, required if no file parameter specified).
 | tags| string     | Optional: Comma delimited list of tags (string, optional).
 | sourcePostUrl| string     | Optional: The source of the asset (string, optional).
