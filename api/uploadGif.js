@@ -39,8 +39,6 @@ module.exports = (req, res, callback) => {
     (err, response, result) => {
         err = err ? err : response.statusCode !== 200;
         callback(err, res, {to, result});
-
-        if(file) fs.unlink(fn, () => {})
     });
 
 }

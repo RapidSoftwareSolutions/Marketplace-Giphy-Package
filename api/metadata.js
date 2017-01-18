@@ -21,7 +21,6 @@ module.exports.do = function(req, res){
                     type: "credentials",
                     info: "The access_token obtained from Giphy.",
                     required: true
-                    
                 },
                 { 
                     name: "query", 
