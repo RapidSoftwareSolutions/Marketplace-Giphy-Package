@@ -1,3 +1,6 @@
+
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Giphy/functions?utm_source=RapidAPIGitHub_GiphyFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
 # Giphy Package
 Animated GIF search engine.
 
