@@ -8,7 +8,7 @@ module.exports = (req, res, callback) => {
     req.body.args = lib.clearArgs(req.body.args, false);
 
     let {
-        apiKey, 
+        apiKey,
         username,
         sourceImage,
         tags,
@@ -25,14 +25,15 @@ module.exports = (req, res, callback) => {
         callback('Fill in required fields.', res, {to}, ['apiKey']);
         return;
     }
+    newTags = util.isArray(tags) ? gifIds.join() : tags;
 
-    request.post('http://upload.giphy.com/v1/gifs', { 
+    request.post('http://upload.giphy.com/v1/gifs', {
         form: {
             api_key:          apiKey,
             username:         username,
             source_post_url:  sourcePostUrl,
             source_image_url: sourceImage,
-            tags:             tags,
+            tags:             newTags,
             is_hidden:        isHidden,
         }
     },

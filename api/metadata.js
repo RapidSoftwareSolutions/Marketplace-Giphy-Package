@@ -22,37 +22,38 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "query", 
-                    type: "String", 
+                {
+                    name: "query",
+                    type: "String",
                     info: "search query term or phrase.",
                     required: true
                 },
-                { 
-                    name: "limit", 
-                    type: "String", 
+                {
+                    name: "limit",
+                    type: "String",
                     info: "number of results to return, maximum 100. Default 25.",
                     required: false
                 },
-                { 
-                    name: "offset", 
-                    type: "String", 
+                {
+                    name: "offset",
+                    type: "String",
                     info: "results offset, defaults to 0.",
                     required: false
                 },
-                { 
-                    name: "rating", 
-                    type: "String", 
+                {
+                    name: "rating",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },
-                { 
-                    name: "lang", 
-                    type: "String", 
+                {
+                    name: "lang",
+                    type: "String",
                     info: "specify default country for regional content; format is 2-letter ISO 639-1 country code.",
                     required: false
                 },
-                
+
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -69,19 +70,20 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "limit", 
-                    type: "String", 
+                {
+                    name: "limit",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "limits the number of results returned. By default returns 25 results.",
                     required: false
                 },
-                { 
-                    name: "rating", 
-                    type: "String", 
+                {
+                    name: "rating",
+                    type: "String",
                     info: "limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },
-                
+
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -98,25 +100,26 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "text", 
-                    type: "String", 
+                {
+                    name: "text",
+                    type: "String",
                     info: "term or phrase to translate into a GIF",
                     required: true
                 },
-                { 
-                    name: "rating", 
-                    type: "String", 
+                {
+                    name: "rating",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },
-                { 
-                    name: "lang", 
-                    type: "String", 
+                {
+                    name: "lang",
+                    type: "String",
                     info: "specify default country for regional content; format is 2-letter ISO 639-1 country code. ",
                     required: false
                 },
-                
+
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -133,19 +136,20 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "tag", 
-                    type: "String", 
+                {
+                    name: "tag",
+                    type: "String",
                     info: "the GIF tag to limit randomness by",
                     required: true
                 },
-                { 
-                    name: "rating", 
-                    type: "String", 
+                {
+                    name: "rating",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "(optional)limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },
-                
+
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -162,9 +166,9 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "gifId", 
-                    type: "String", 
+                {
+                    name: "gifId",
+                    type: "String",
                     info: "the GIF ID",
                     required: true
                 }
@@ -184,10 +188,15 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "gifIds", 
-                    type: "String", 
-                    info: "comma separated gif ids",
+                {
+                    name: "gifIds",
+                    type: "List",
+                    structure:{
+                      name: "gifId",
+						          type: "String",
+						          info: "Single gif Id"
+                    },
+                    info: "array of gif ids",
                     required: true
                 }
             ],
@@ -206,37 +215,38 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "query", 
-                    type: "String", 
+                {
+                    name: "query",
+                    type: "String",
                     info: "search query term or phrase.",
                     required: true
                 },
-                { 
-                    name: "limit", 
-                    type: "String", 
+                {
+                    name: "limit",
+                    type: "String",
                     info: "number of results to return, maximum 100. Default 25.",
                     required: false
                 },
-                { 
-                    name: "offset", 
-                    type: "String", 
+                {
+                    name: "offset",
+                    type: "String",
                     info: "results offset, defaults to 0.",
                     required: false
                 },
-                { 
-                    name: "rating", 
-                    type: "String", 
+                {
+                    name: "rating",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },
-                { 
-                    name: "lang", 
-                    type: "String", 
+                {
+                    name: "lang",
+                    type: "String",
                     info: "specify default country for regional content; format is 2-letter ISO 639-1 country code.",
                     required: false
                 },
-                
+
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -253,19 +263,20 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "limit", 
-                    type: "String", 
+                {
+                    name: "limit",
+                    type: "String",
                     info: "limits the number of results returned. By default returns 25 results.",
                     required: false
                 },
-                { 
-                    name: "rating", 
-                    type: "String", 
+                {
+                    name: "rating",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },
-                
+
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -282,25 +293,26 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "text", 
-                    type: "String", 
+                {
+                    name: "text",
+                    type: "String",
                     info: "term or phrase to translate into a GIF",
                     required: true
                 },
-                { 
-                    name: "rating", 
-                    type: "String", 
+                {
+                    name: "rating",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },
-                { 
-                    name: "lang", 
-                    type: "String", 
+                {
+                    name: "lang",
+                    type: "String",
                     info: "specify default country for regional content; format is 2-letter ISO 639-1 country code. ",
                     required: false
                 },
-                
+
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -317,19 +329,20 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "tag", 
-                    type: "String", 
+                {
+                    name: "tag",
+                    type: "String",
                     info: "the GIF tag to limit randomness by",
                     required: true
                 },
-                { 
-                    name: "rating", 
-                    type: "String", 
+                {
+                    name: "rating",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },
-                
+
             ],
             callbacks: [
                 { name: "success", info:"Success" },
@@ -346,33 +359,38 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Giphy.",
                     required: true
                 },
-                { 
-                    name: "username", 
-                    type: "String", 
+                {
+                    name: "username",
+                    type: "String",
                     info: "Optional: Your assigned username (string, required for approved apps only)",
                     required: false
                 },
-                { 
+                {
                     name: "sourceImage",
                     type: "File",
                     info: "The URL or the file of the media you wish to upload",
                     required: true
                 },
                 {
-                    name: "tags", 
-                    type: "String", 
-                    info: "Optional: Comma delimited list of tags (string, optional)",
+                    name: "tags",
+                    type: "List",
+                    structure:{
+                      name: "tag",
+                      type: "String",
+                      info: "Single tag"
+                    },
+                    info: "Optional: Array of tags (string, optional)",
                     required: false
                 },
                 {
-                    name: "sourcePostUrl", 
-                    type: "String", 
+                    name: "sourcePostUrl",
+                    type: "String",
                     info: "Optional: The source of the asset (string, optional)",
                     required: false
                 },
                 {
-                    name: "isHidden", 
-                    type: "String", 
+                    name: "isHidden",
+                    type: "String",
                     info: "Optional: True (boolean, optional)",
                     required: false
                 }

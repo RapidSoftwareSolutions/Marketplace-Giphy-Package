@@ -7,12 +7,12 @@ Animated GIF search engine.
 * Domain: giphy.com
 * credentials: apiKey
 
-## How to get credentials: 
-### Public Beta Key 
-The Giphy API is open to the public. We have instituted a simple, single public beta key system to let anyone try it out. The API key is required for all endpoints. 
+## How to get credentials:
+### Public Beta Key
+The Giphy API is open to the public. We have instituted a simple, single public beta key system to let anyone try it out. The API key is required for all endpoints.
 
-+ **The public beta key is "dc6zaTOxFJmzC”** 
-	
++ **The public beta key is "dc6zaTOxFJmzC”**
+
 Please use this key while you develop your application and experiment with your integrations. Note: the public key is subject to rate limit constraints and we do not encourage live production deployments to use the public key.
 
 #### Request a Production Key
@@ -24,6 +24,15 @@ Once you’re ready to use the Giphy API in production, please visit [api.giphy.
 
 + As per our section 5 A of our terms of service, **we require all apps that use the Giphy API to conspicuously display "Powered By Giphy" attribution marks where the API is utilized.** You can find approved [official logo marks here](http://www.google.com/url?q=http%3A%2F%2Fgiphymedia.s3.amazonaws.com%2Fgiphy-attribution-marks.zip&sa=D&sntz=1&usg=AFQjCNH2vioX4nvsrL6iR2kuB_WG-85VLA). Please provide screenshots of your attribution placement.
 
+## Custom datatypes:
+ |Datatype|Description|Example
+ |--------|-----------|----------
+ |Datepicker|String which includes date and time|```2016-05-28 00:00:00```
+ |Map|String which includes latitude and longitude coma separated|```50.37, 26.56```
+ |List|Simple array|```["123", "sample"]```
+ |Select|String with predefined values|```sample```
+ |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
+
 
 ## Giphy.searchGifs
 search all Giphy GIFs for a word or phrase. Punctuation will be stripped and ignored. Use a plus or url encode for phrases. Example paul+rudd, ryan+gosling or american+psycho.
@@ -34,7 +43,7 @@ search all Giphy GIFs for a word or phrase. Punctuation will be stripped and ign
 | query | string     | search query term or phrase.
 | limit | string     | (optional) number of results to return, maximum 100. Default 25.
 | offset| string     | (optional) results offset, defaults to 0.
-| rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
+| rating| select     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 | lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code.
 
 
@@ -45,7 +54,7 @@ Fetch GIFs currently trending online. Hand curated by the Giphy editorial team. 
 |-------|------------|----------
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | limit | string     | (optional) limits the number of results returned. By default returns 25 results.
-| rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
+| rating| select     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 
 
 ## Giphy.translatesToGif
@@ -55,8 +64,8 @@ The translate API draws on search, but uses the Giphy 'special sauce' to handle 
 |-------|------------|----------
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | s  | string     | Required: term or phrase to translate into a GIF
-| rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
-| lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code. 
+| rating| select     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
+| lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code.
 
 
 ## Giphy.getRandomGif
@@ -66,7 +75,7 @@ Returns a random GIF, limited by tag. Excluding the tag parameter will return a 
 |-------|------------|----------
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | tag   | string     | Required: the GIF tag to limit randomness by
-| rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
+| rating| select     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 
 
 ## Giphy.getGif
@@ -84,7 +93,7 @@ A multiget version of the get GIF by ID endpoint. In this case the IDs are feqkV
 | Field | Type       | Description
 |-------|------------|----------
 | apiKey| credentials| Required: The access_token obtained from Giphy.
-| gifIds| string     | Required: comma separated gif ids
+| gifIds| list     | Required: comma separated gif ids
 
 
 ## Giphy.searchstickers
@@ -96,7 +105,7 @@ Replicates the functionality and requirements of the classic Giphy search, but r
 | query | string     | Required: search query term or phrase.
 | limit | string     | (optional) number of results to return, maximum 100. Default 25.
 | offset| string     | (optional) results offset, defaults to 0.
-| rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
+| rating| select     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 | lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code.
 
 
@@ -107,7 +116,7 @@ Get the latest stickers trending on Giphy with this endpoint. Hand curated by th
 |-------|------------|----------
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | limit | string     | (optional) limits the number of results returned. By default returns 25 results.
-| rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
+| rating| select     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 
 
 ## Giphy.translatesTosticker
@@ -117,8 +126,8 @@ Using the same alogirithm as the GIF translate endpoint, the sticker translate e
 |-------|------------|----------
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | s  | string     | Required: term or phrase to translate into a GIF
-| rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
-| lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code. 
+| rating| select     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
+| lang  | string     | (optional) specify default country for regional content; format is 2-letter IsO 639-1 country code.
 
 
 ## Giphy.getRandomsticker
@@ -128,7 +137,7 @@ Returns a spotaneously selected sticker from Giphy's sticker collection. Optiona
 |-------|------------|----------
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | tag   | string     | Required: the GIF tag to limit randomness by
-| rating| string     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
+| rating| select     | (optional) limit results to those rated (y,g, pg, pg-13 or r).
 
 
 ## Giphy.uploadGif
@@ -139,6 +148,6 @@ The Giphy Upload API allows you to upload and host your content programmatically
 | apiKey| credentials| Required: The access_token obtained from Giphy.
 | username   | string     | Optional: Your assigned username (string, required for approved apps only)
 | sourceImageUrl| string     | Required: The URL for the image or video you wish to upload (string, required if no file parameter specified).
-| tags| string     | Optional: Comma delimited list of tags (string, optional).
+| tags| List     | Optional: Array of tags (string, optional).
 | sourcePostUrl| string     | Optional: The source of the asset (string, optional).
 | isHidden| string     | Optional: True (boolean, optional).
