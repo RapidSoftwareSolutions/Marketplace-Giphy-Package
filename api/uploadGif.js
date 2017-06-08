@@ -3,6 +3,7 @@ const request = require("request");
 const fs      = require('fs');
 const path    = require('path');
 const spawn   = require('child_process').spawnSync
+const util = require('util');
 
 module.exports = (req, res, callback) => {
     req.body.args = lib.clearArgs(req.body.args, false);
