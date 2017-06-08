@@ -379,7 +379,7 @@ module.exports.do = function(req, res){
                       type: "String",
                       info: "Single tag"
                     },
-                    info: "Optional: Array of tags (string, optional)",
+                    info: "Optional: Array of tags (array, optional)",
                     required: false
                 },
                 {

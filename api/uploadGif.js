@@ -26,7 +26,7 @@ module.exports = (req, res, callback) => {
         callback('Fill in required fields.', res, {to}, ['apiKey']);
         return;
     }
-    newTags = util.isArray(tags) ? gifIds.join() : tags;
+    newTags = util.isArray(tags) ? tags.join() : tags;
 
     request.post('http://upload.giphy.com/v1/gifs', {
         form: {
