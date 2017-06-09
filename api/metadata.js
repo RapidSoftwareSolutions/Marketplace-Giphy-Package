@@ -72,14 +72,14 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "limit",
-                    type: "Select",
-                    options :["y", "g", "pg", "pg-13", "r"],
+                    type: "String"
                     info: "limits the number of results returned. By default returns 25 results.",
                     required: false
                 },
                 {
                     name: "rating",
-                    type: "String",
+                    type: "Select",
+                    options :["y", "g", "pg", "pg-13", "r"],
                     info: "limit results to those rated (y,g, pg, pg-13 or r).",
                     required: false
                 },

@@ -29,7 +29,6 @@ module.exports = (req, res, callback) => {
         }
         return parsedString;
     }
-
     gifIds = IsJsonString(gifIds)? IsJsonString(gifIds).join() : gifIds ;
 
     request({
