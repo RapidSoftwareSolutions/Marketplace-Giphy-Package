@@ -19,7 +19,18 @@ module.exports = (req, res, callback) => {
         callback('Fill in required fields.', res, {to}, ['apiKey', 'gifIds']);
         return;
     }
-    newGifIds = util.isArray(gifIds) ? gifIds.join() : gifIds;
+
+    gifIds = util.isArray(gifIds) ? gifIds.join() : gifIds;
+    function IsJsonString(str) {
+        try {
+          parsedString =   JSON.parse(str);
+        } catch (e) {
+            return false;
+        }
+        return parsedString;
+    }
+
+    gifIds = IsJsonString(gifIds)? IsJsonString(gifIds).join() : gifIds ;
 
     request({
 
@@ -27,7 +38,7 @@ module.exports = (req, res, callback) => {
         url: 'http://api.giphy.com/v1/gifs',
         qs: lib.clearArgs({
             api_key: apiKey,
-            ids: newGifIds
+            ids: gifIds
         })
     },
     (err, response, result) => {
