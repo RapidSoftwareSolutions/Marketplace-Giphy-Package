@@ -26,7 +26,16 @@ module.exports = (req, res, callback) => {
         callback('Fill in required fields.', res, {to}, ['apiKey']);
         return;
     }
-    newTags = util.isArray(tags) ? tags.join() : tags;
+    tags = util.isArray(tags) ? gifIds.join() : tags;
+    function IsJsonString(str) {
+        try {
+          parsedString =   JSON.parse(str);
+        } catch (e) {
+            return false;
+        }
+        return parsedString;
+    }
+    tags = IsJsonString(tags)? IsJsonString(tags).join() : tags ;
 
     request.post('http://upload.giphy.com/v1/gifs', {
         form: {
@@ -34,7 +43,7 @@ module.exports = (req, res, callback) => {
             username:         username,
             source_post_url:  sourcePostUrl,
             source_image_url: sourceImage,
-            tags:             newTags,
+            tags:             tags,
             is_hidden:        isHidden,
         }
     },
