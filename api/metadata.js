@@ -72,7 +72,7 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "limit",
-                    type: "String"
+                    type: "String",
                     info: "limits the number of results returned. By default returns 25 results.",
                     required: false
                 },
