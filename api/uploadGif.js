@@ -26,7 +26,7 @@ module.exports = (req, res, callback) => {
         callback('Fill in required fields.', res, {to}, ['apiKey']);
         return;
     }
-    tags = util.isArray(tags) ? gifIds.join() : tags;
+    tags = util.isArray(tags) ? tags.join() : tags;
     function IsJsonString(str) {
         try {
           parsedString =   JSON.parse(str);
