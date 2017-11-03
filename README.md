@@ -4,7 +4,7 @@
 # Giphy Package
 Animated GIF search engine.
 
-* Domain: giphy.com
+* Domain: [giphy.com](https://giphy.com/)
 * credentials: apiKey
 
 ## How to get credentials:

@@ -30,13 +30,13 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "limit",
-                    type: "String",
+                    type: "Number",
                     info: "number of results to return, maximum 100. Default 25.",
                     required: false
                 },
                 {
                     name: "offset",
-                    type: "String",
+                    type: "Number",
                     info: "results offset, defaults to 0.",
                     required: false
                 },
@@ -72,7 +72,7 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "limit",
-                    type: "String",
+                    type: "Number",
                     info: "limits the number of results returned. By default returns 25 results.",
                     required: false
                 },
@@ -223,13 +223,13 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "limit",
-                    type: "String",
+                    type: "Number",
                     info: "number of results to return, maximum 100. Default 25.",
                     required: false
                 },
                 {
                     name: "offset",
-                    type: "String",
+                    type: "Number",
                     info: "results offset, defaults to 0.",
                     required: false
                 },
@@ -265,7 +265,7 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "limit",
-                    type: "String",
+                    type: "Number",
                     info: "limits the number of results returned. By default returns 25 results.",
                     required: false
                 },
@@ -390,7 +390,8 @@ module.exports.do = function(req, res){
                 },
                 {
                     name: "isHidden",
-                    type: "String",
+                    type: "Select",
+                    options:["true","false"],
                     info: "Optional: True (boolean, optional)",
                     required: false
                 }
